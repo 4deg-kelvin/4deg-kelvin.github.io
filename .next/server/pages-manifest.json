@@ -1,0 +1,8 @@
+{
+  "/_app": "pages/_app.js",
+  "/_error": "pages/_error.js",
+  "/_document": "pages/_document.js",
+  "/": "pages/index.js",
+  "/projects/multilingual-sentiment-analysis": "pages/projects/multilingual-sentiment-analysis.js",
+  "/projects/neural-machine-translation": "pages/projects/neural-machine-translation.js"
+}

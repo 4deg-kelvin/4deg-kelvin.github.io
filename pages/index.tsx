@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
-import { BookOpen, Github, Linkedin, Mail, Twitter } from "lucide-react"
+import { BookOpen, Github, Linkedin, Mail } from "lucide-react"
 import {
   HoverCard,
   HoverCardContent,

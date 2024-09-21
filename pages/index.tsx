@@ -1,16 +1,26 @@
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { BookOpen, Github, Linkedin, Mail, Twitter } from "lucide-react"
+import {
+  HoverCard,
+  HoverCardContent,
+  HoverCardTrigger,
+} from "@/components/ui/hover-card"
+
 import Link from "next/link"
 import Image from "next/image"
 
 export default function Home() {
   return (
+
     <div className="flex flex-col min-h-screen bg-white text-black font-inter">
+      <div className="bg-yellow-400 text-black text-center py-2 font-semibold">
+      🚧 🛠️ Under Construction! Excuse the dead links, and the spiders.
+      </div>
       <header className="px-4 lg:px-6 h-14 flex items-center bg-sky-100">
         <Link className="flex items-center justify-center" href="#">
           <BookOpen className="h-6 w-6 text-sky-600" />
-          <span className="sr-only">NLP Researcher</span>
+          <span className="sr-only">NLP Researcher </span>
         </Link>
         <nav className="ml-auto flex gap-4 sm:gap-6">
           <Link className="text-sm font-medium hover:text-sky-600 hover:underline underline-offset-4" href="#about">
@@ -35,7 +45,7 @@ export default function Home() {
                 <div className="relative w-80 h-64 mx-auto mb-4">
                   <Image
                     src="/profile.jpg"
-                    alt="Dr. Jane Doe"
+                    alt="Kelvin"
                     layout="intrinsic"
                     width={450}
                     height={450}
@@ -44,10 +54,10 @@ export default function Home() {
                   />
                 </div>
                 <h1 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl lg:text-6xl/none text-sky-900">
-                  Dr. Jane Doe
+                  Kelvin Nguyen
                 </h1>
                 <p className="mx-auto max-w-[700px] text-sky-800 md:text-xl">
-                  NLP Researcher | Machine Learning Specialist | AI Enthusiast
+                  NLP Developer & Researcher | 🎄Stanford University Sophomore | Snoopy Enthusiast
                 </p>
               </div>
               <div className="space-x-4">
@@ -65,52 +75,53 @@ export default function Home() {
           <div className="container px-4 md:px-6">
             <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-sky-900">About Me</h2>
             <p className="mt-4 max-w-[700px] text-sky-800 md:text-xl">
-              I'm Dr. Jane Doe, a passionate NLP researcher with over 10 years of experience in the field. My work
-              focuses on developing innovative language models and exploring the intersection of linguistics and machine
-              learning. I'm currently a Senior Researcher at AI Labs, where I lead projects on sentiment analysis and
-              machine translation.
+              I'm Kelvin Nguyen, an undergraduate Computer Science student at Stanford University, as well as a part-time data science/AI developer for
+              Edwards Lifesciences.
+              I'm also currently an NLP researcher, focusing on concept representations in LLM latent spaces, 
+              and I am developing AI-driven platforms for medical technology companies. 
             </p>
           </div>
         </section>
         <section id="projects" className="w-full py-12 md:py-24 lg:py-32 bg-sky-50">
           <div className="container px-4 md:px-6">
-            <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl mb-8 text-sky-900">Research Projects</h2>
+            <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl mb-8 text-sky-900">Projects</h2>
             <div className="grid gap-6 sm:grid-cols-2">
               <Card className="bg-white border-sky-200">
                 <CardHeader>
                   <CardTitle className="text-sky-800">
-                    <Link href="/projects/multilingual-sentiment-analysis" className="hover:underline">
-                      Multilingual Sentiment Analysis
+                    <Link href="/projects/concept-representation" className="hover:underline">
+                      Concept Representations in LLM Latent Spaces
                     </Link>
                   </CardTitle>
-                  <CardDescription className="text-sky-600">Developing a model for cross-lingual sentiment analysis</CardDescription>
+                  <CardDescription className="text-sky-600">Examining how LLMs encode conceptual relationships in their vector forms of words</CardDescription>
                 </CardHeader>
                 <CardContent>
                   <p className="text-sm text-sky-700">
-                    This project aims to create a unified model capable of analyzing sentiment across multiple languages,
-                    improving global social media monitoring and customer feedback analysis.
+                  This ongoing project explores whether contemporary language models can identify and extract different context-dependent aspects of concepts from their embeddings, using polysemous words and clustering sentences containing those words. 
+                  The results show that language models can encode and describe context-specific conceptual aspects, while also 
+                  demonstrating an ability to understand and evaluate conceptual cohesiveness in sentence clusters.
                   </p>
                   <Button className="mt-4 bg-sky-600 text-white hover:bg-sky-700" asChild>
-                    <Link href="/projects/multilingual-sentiment-analysis">Learn More</Link>
+                    <Link href="/projects/concept-representation">Learn More</Link>
                   </Button>
                 </CardContent>
               </Card>
+              
               <Card className="bg-white border-sky-200">
                 <CardHeader>
                   <CardTitle className="text-sky-800">
-                    <Link href="/projects/neural-machine-translation" className="hover:underline">
-                      Neural Machine Translation
+                    <Link href="/projects/edwards-lifesciences" className="hover:underline">
+                      Edwards Lifesciences <span className="italic text-red-500">(proprietary)</span>
                     </Link>
                   </CardTitle>
-                  <CardDescription className="text-sky-600">Improving translation quality for low-resource languages</CardDescription>
+                  <CardDescription className="text-sky-600">Creating AI-driven Streamlit platforms, integrated with Snowflake</CardDescription>
                 </CardHeader>
                 <CardContent>
                   <p className="text-sm text-sky-700">
-                    Focusing on enhancing translation capabilities for languages with limited training data, using
-                    transfer learning and data augmentation techniques.
+                    Creating AI-platforms with Streamlit as a data science/AI developer, connected to Snowflake Data Lake patient data, to be used by all business units. 
                   </p>
                   <Button className="mt-4 bg-sky-600 text-white hover:bg-sky-700" asChild>
-                    <Link href="/projects/neural-machine-translation">Learn More</Link>
+                    <Link href="/projects/edwards-lifesciences">Learn More</Link>
                   </Button>
                 </CardContent>
               </Card>
@@ -122,27 +133,29 @@ export default function Home() {
             <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl mb-8 text-sky-900">Publications</h2>
             <ul className="space-y-4">
               <li>
-                <h3 className="text-xl font-semibold text-sky-800">
-                  "Advances in Cross-lingual Sentiment Analysis: A Comprehensive Survey"
-                </h3>
-                <p className="text-sm text-sky-600">
-                  Published in Journal of Artificial Intelligence Research, 2023
-                </p>
+                <Link href="https://web.stanford.edu/class/cs224n/project.html" className="hover:text-sky-700">
+                  <h3 className="text-xl font-semibold text-sky-800 hover:text-sky-700 hover:underline">
+                    "Diving Under the Hood: Exploring LLM Conceptual Understanding Through Latent Embeddings"
+                  </h3>
+                  <p className="text-sm text-sky-600">
+                    Preprint, CS 224N Project, 2024
+                  </p>
+                </Link>
               </li>
               <li>
-                <h3 className="text-xl font-semibold text-sky-800">
-                  "Low-Resource Neural Machine Translation: Challenges and Solutions"
-                </h3>
+                <HoverCard>
+                  <HoverCardTrigger>
+                    <h3 className="text-xl font-semibold text-sky-800 hover:text-sky-700 hover:underline">
+                    "Fusion of Deep Learning and Rule-Based Techniques for Enhanced Paper-Based ECG Digitization"
+                    </h3>
+                  </HoverCardTrigger>
+                  <HoverCardContent>
+                    Currently preprint, will be published in November
+                  </HoverCardContent>
+                </HoverCard>
+
                 <p className="text-sm text-sky-600">
-                  Proceedings of the 58th Annual Meeting of the Association for Computational Linguistics, 2022
-                </p>
-              </li>
-              <li>
-                <h3 className="text-xl font-semibold text-sky-800">
-                  "Transformer-based Models for Emotion Detection in Multilingual Contexts"
-                </h3>
-                <p className="text-sm text-sky-600">
-                  EMNLP 2021: Conference on Empirical Methods in Natural Language Processing
+                  Preprint, Computing in Cardiology, 2024
                 </p>
               </li>
             </ul>
@@ -153,20 +166,17 @@ export default function Home() {
             <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl mb-8 text-sky-900">Contact Me</h2>
             <div className="max-w-md mx-auto text-center">
               <p className="mb-4 text-sky-800">Feel free to reach out to me for collaborations, questions, or just to connect!</p>
+              <p className="mb-4 text-sky-800 bold">Email: </p>
               <div className="flex justify-center space-x-4">
-                <a href="mailto:jane.doe@example.com" className="text-sky-600 hover:text-sky-700">
+                <a href="mailto:kelvinknguyen@stanford.edu" className="text-sky-600 hover:text-sky-700">
                   <Mail className="h-6 w-6" />
                   <span className="sr-only">Email</span>
                 </a>
-                <a href="https://twitter.com/janedoe" className="text-sky-600 hover:text-sky-700">
-                  <Twitter className="h-6 w-6" />
-                  <span className="sr-only">Twitter</span>
-                </a>
-                <a href="https://linkedin.com/in/janedoe" className="text-sky-600 hover:text-sky-700">
+                <a href="https://linkedin.com/in/kelvinknguyen27" className="text-sky-600 hover:text-sky-700">
                   <Linkedin className="h-6 w-6" />
                   <span className="sr-only">LinkedIn</span>
                 </a>
-                <a href="https://github.com/janedoe" className="text-sky-600 hover:text-sky-700">
+                <a href="https://github.com/4deg-kelvin" className="text-sky-600 hover:text-sky-700">
                   <Github className="h-6 w-6" />
                   <span className="sr-only">GitHub</span>
                 </a>
@@ -176,15 +186,12 @@ export default function Home() {
         </section>
       </main>
       <footer className="flex flex-col gap-2 sm:flex-row py-6 w-full shrink-0 items-center px-4 md:px-6 border-t border-sky-200 bg-sky-100">
-        <p className="text-xs text-sky-800">© 2023 Dr. Jane Doe. All rights reserved.</p>
+        <p className="text-xs text-sky-800">© 2024 Kelvin Nguyen All rights reserved.</p>
         <nav className="sm:ml-auto flex gap-4 sm:gap-6">
-          <Link className="text-xs hover:underline underline-offset-4 text-sky-700 hover:text-sky-900" href="https://twitter.com/janedoe">
-            Twitter
-          </Link>
-          <Link className="text-xs hover:underline underline-offset-4 text-sky-700 hover:text-sky-900" href="https://linkedin.com/in/janedoe">
+          <Link className="text-xs hover:underline underline-offset-4 text-sky-700 hover:text-sky-900" href="https://linkedin.com/in/kelvinknguyen27">
             LinkedIn
           </Link>
-          <Link className="text-xs hover:underline underline-offset-4 text-sky-700 hover:text-sky-900" href="https://github.com/janedoe">
+          <Link className="text-xs hover:underline underline-offset-4 text-sky-700 hover:text-sky-900" href="https://github.com/4deg-kelvin">
             GitHub
           </Link>
         </nav>

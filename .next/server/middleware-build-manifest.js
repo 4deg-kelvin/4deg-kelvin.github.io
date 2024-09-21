@@ -23,16 +23,6 @@ self.__BUILD_MANIFEST = {
       "static/chunks/webpack.js",
       "static/chunks/main.js",
       "static/chunks/pages/_error.js"
-    ],
-    "/projects/multilingual-sentiment-analysis": [
-      "static/chunks/webpack.js",
-      "static/chunks/main.js",
-      "static/chunks/pages/projects/multilingual-sentiment-analysis.js"
-    ],
-    "/projects/neural-machine-translation": [
-      "static/chunks/webpack.js",
-      "static/chunks/main.js",
-      "static/chunks/pages/projects/neural-machine-translation.js"
     ]
   },
   "ampFirstPages": []

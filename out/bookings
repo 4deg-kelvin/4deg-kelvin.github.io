@@ -1,0 +1,11 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="refresh" content="0; url=https://calendar.google.com/calendar/embed?src=your_calendar_link_here" />
+    <title>Bookings</title>
+</head>
+<body>
+  <!-- Google Calendar Appointment Scheduling begin -->
+  <iframe src="https://calendar.google.com/calendar/appointments/schedules/AcZssZ1S6xahGqKfCC_B024d90dj6WWiobykCrvoNm0hqW_ITrlFDznPs1WdW1fQKnqi2E_anjyCcjFo?gv=true" style="border: 0" width="100%" height="600" frameborder="0"></iframe>
+  <!-- end Google Calendar Appointment Scheduling --></body>
+</html>

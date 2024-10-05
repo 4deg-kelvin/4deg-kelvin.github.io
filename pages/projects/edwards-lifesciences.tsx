@@ -18,36 +18,21 @@ export default function EdwardsLifesciences() {
           </h1>
           <p className="text-xl text-sky-800 mb-8">
             Creating AI-driven Streamlit platforms, integrated with Snowflake
+            <br/><br/>
+            <em>Current Position: </em> Data Science/AI Contingent Developer
           </p>
           <div className="prose max-w-none text-sky-700">
             <h2 className="text-2xl font-semibold text-sky-800 mt-8 mb-4">Project Overview</h2>
             <p>
-              This project focuses on enhancing translation capabilities for languages with limited training data,
-              using transfer learning and data augmentation techniques. Our goal is to bridge the gap between
-              high-resource and low-resource languages in machine translation, making quality translation more
-              accessible for a wider range of languages.
+              This project focuses on developing AI-driven Streamlit platforms for Edwards Lifesciences, a global leader 
+              in creating various cardiovascular technolgoies, including heart valves. I solely developed a platform to 
+              be used by various business units and teams, closely collaborating with stakeholders to ensure 
+              interoperability, including matching design language of previous software. The platform utilizes patient 
+              data from Snowflake. 
+
+              <em style={{color: 'blue'}}>This project is proprietary and protected by an NDA.</em>
             </p>
-            <h2 className="text-2xl font-semibold text-sky-800 mt-8 mb-4">Key Objectives</h2>
-            <ul className="list-disc pl-6">
-              <li>Develop novel transfer learning techniques for cross-lingual knowledge transfer</li>
-              <li>Create effective data augmentation methods for low-resource languages</li>
-              <li>Implement and evaluate multilingual translation models</li>
-              <li>Collaborate with native speakers to ensure translation quality and cultural appropriateness</li>
-            </ul>
-            <h2 className="text-2xl font-semibold text-sky-800 mt-8 mb-4">Current Progress</h2>
-            <p>
-              We've successfully implemented a baseline multilingual translation model covering 100 languages. For
-              low-resource languages, we've seen significant improvements using our novel transfer learning techniques.
-              We're currently working on refining our data augmentation pipeline, which has shown promising results in
-              preliminary experiments.
-            </p>
-            <h2 className="text-2xl font-semibold text-sky-800 mt-8 mb-4">Future Directions</h2>
-            <p>
-              Our next steps include expanding our model to cover more low-resource languages and dialects. We're also
-              exploring the integration of unsupervised learning techniques to further improve translation quality for
-              languages with very limited parallel data. We plan to open-source our model and tools to encourage
-              community contributions and accelerate progress in this critical area of NLP research.
-            </p>
+            
           </div>
           <Link href="/" passHref>
             <Button className="mt-8 bg-sky-600 text-white hover:bg-sky-700">

@@ -63,7 +63,7 @@ export default function Home() {
                   Kelvin Nguyen
                 </h1>
                 <p className="mx-auto max-w-[700px] text-sky-800 md:text-xl">
-                  NLP Developer & Researcher | 🎄Stanford University Sophomore | Snoopy Enthusiast
+                  NLP Developer & Researcher | 🎄Stanford University Student | Snoopy Enthusiast
                 </p>
               </div>
               <div className="space-x-4">
@@ -229,7 +229,7 @@ export default function Home() {
       <footer className="flex flex-col gap-2 sm:flex-row py-6 w-full shrink-0 items-center px-4 md:px-6 border-t border-sky-200 bg-sky-100">
         <p className="text-xs text-sky-800">© 2024 Kelvin Nguyen All rights reserved.</p>
         <nav className="sm:ml-auto flex gap-4 sm:gap-6">
-          <Link className="text-xs hover:underline underline-offset-4 text-sky-700 hover:text-sky-900" href="https://linkedin.com/in/kelvinknguyen27">
+          <Link className="text-xs hover:underline underline-offset-4 text-sky-700 hover:text-sky-900" href="https://linkedin.com/in/kelvinkn">
             LinkedIn
           </Link>
           <Link className="text-xs hover:underline underline-offset-4 text-sky-700 hover:text-sky-900" href="https://github.com/4deg-kelvin">

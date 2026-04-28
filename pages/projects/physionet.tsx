@@ -1,60 +1,120 @@
-import { Button } from "@/components/ui/button"
 import { ArrowLeft } from "lucide-react"
 import Link from "next/link"
 
+const C = {
+  pageBg:     "#F5EDD6",
+  sectionAlt: "#EDE4C4",
+  cardBg:     "#FAF5E8",
+  border:     "#C8B98A",
+  forestDark: "#1F3B16",
+  forestMid:  "#3D6B30",
+  amber:      "#C4A05A",
+  bodyText:   "#3C3226",
+  dimText:    "#5A4E3C",
+  mutedText:  "#7A6E5F",
+  tagBg:      "#D8EAD0",
+}
+
 export default function Physionet() {
   return (
-    <div className="flex flex-col min-h-screen bg-white text-black font-inter">
-      <header className="px-4 lg:px-6 h-14 flex items-center bg-sky-100">
-        <Link className="flex items-center justify-center text-sky-600 hover:text-sky-700" href="/">
-          <ArrowLeft className="h-6 w-6 mr-2" />
-          Back to Home
-        </Link>
+    <div style={{ backgroundColor: C.pageBg, color: C.bodyText, fontFamily: "'DM Sans', sans-serif", minHeight: "100vh" }}>
+
+      {/* NAV */}
+      <header style={{ backgroundColor: C.sectionAlt, borderBottom: `1px solid ${C.border}`, position: "sticky", top: 0, zIndex: 50 }}>
+        <div style={{ maxWidth: 900, margin: "0 auto", padding: "0 1.5rem", height: 56, display: "flex", alignItems: "center" }}>
+          <Link href="/" style={{ display: "flex", alignItems: "center", gap: "0.5rem", fontSize: "0.875rem", fontWeight: 500, color: C.forestMid, textDecoration: "none" }}>
+            <ArrowLeft size={16} />
+            Back
+          </Link>
+          <span style={{ marginLeft: "auto", fontFamily: "'Cormorant Garamond', serif", fontSize: "1.125rem", fontWeight: 600, color: C.forestDark, letterSpacing: "0.04em" }}>
+            KN
+          </span>
+        </div>
       </header>
-      <main className="flex-1 py-12 md:py-24 lg:py-32">
-        <div className="container px-4 md:px-6">
-          <h1 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl lg:text-6xl/none text-sky-900 mb-4">
+
+      <main style={{ maxWidth: 760, margin: "0 auto", padding: "3.5rem 1.5rem 5rem" }}>
+
+        {/* Header */}
+        <div style={{ marginBottom: "2.5rem" }}>
+          <div style={{ display: "flex", flexWrap: "wrap", gap: "0.375rem", marginBottom: "1rem" }}>
+            {["Computer Vision", "Medical AI", "CinC 2024"].map(tag => (
+              <span key={tag} style={{ fontSize: "0.75rem", fontWeight: 500, color: C.forestMid, backgroundColor: C.tagBg, padding: "0.2rem 0.625rem", borderRadius: "2px" }}>
+                {tag}
+              </span>
+            ))}
+            <span style={{ fontSize: "0.75rem", fontWeight: 600, color: C.forestMid, backgroundColor: C.tagBg, padding: "0.2rem 0.625rem", borderRadius: "2px" }}>
+              🏆 Finalist
+            </span>
+          </div>
+          <h1 style={{ fontFamily: "'Cormorant Garamond', serif", fontSize: "clamp(2rem, 5vw, 3rem)", fontWeight: 600, color: C.forestDark, lineHeight: 1.15, marginBottom: "1rem", letterSpacing: "-0.01em" }}>
             Physionet Challenge 2024
           </h1>
-          <p className="text-xl text-sky-800 mb-8">
-          Training computer vision transformers to deskew images for ECG digitizaition
+          <p style={{ fontSize: "1.125rem", color: C.dimText, lineHeight: 1.7 }}>
+            Training computer vision transformers to deskew paper ECG images for digitization.
           </p>
-          <div className="prose max-w-none text-sky-700">
-            <h2 className="text-2xl font-semibold text-sky-800 mt-8 mb-4">Project Overview</h2>
-            <p>
-              As part of the Physionet 2024 Challenge, I along with 4 other members in Edwards Lifesciences competed to 
-              develop a computer vision pipeline to convert paper ECGs into a digital format. My task was create a pipeline 
-              to deskew images of ECGs. 
-
-              <br/><br/>
-              I used a <b> computer vision transformer model, finetuning it based on synthetically generated scans 
-                of ECG images.  </b> The model was trained locally on a GPU, and then dockerized and deployed to the Physionet servers. 
-
-              Due to resource constraints, the model was not able to be used in the final product; however, the model did achieve 90% accuracy, and
-              was explored as potential improvement to the rule-based method we used in our paper. 
-
-              
-            </p>
-            <h2 className="text-2xl font-semibold text-sky-800 mt-8 mb-4">Publication</h2>
-            <p>
-              Our paper, <em> "Fusion of Deep Learning and Rule-Based Techniques for Enhanced Paper-Based ECG Digitization" </em> was accepted to the 
-              Computing in Cardiology 2024 Conference. The paper details the development of our pipeline, and was given the award of <b>Best Preprint.</b> 
-
-              <br/><br/>
-              The paper was presented at the conference, and will be published in November. 
-            </p>
-
-          </div>
-          <Link href="/" passHref>
-            <Button className="mt-8 bg-sky-600 text-white hover:bg-sky-700">
-            Back to Projects
-            </Button>
-         </Link>
         </div>
+
+        {/* Achievement badge */}
+        <div style={{
+          backgroundColor: C.cardBg,
+          border: `1px solid ${C.border}`,
+          borderLeft: `3px solid ${C.forestMid}`,
+          borderRadius: "3px",
+          padding: "1rem 1.25rem",
+          marginBottom: "2.5rem",
+          fontSize: "0.9rem",
+          color: C.dimText,
+        }}>
+          <strong style={{ color: C.forestDark }}>Best Preprint Award</strong> — Computing in Cardiology 2024. Paper presented at conference, accepted for publication.
+        </div>
+
+        {/* Prose */}
+        <div style={{ fontSize: "1rem", lineHeight: 1.85, color: C.dimText }}>
+          <ProseHeading>Project Overview</ProseHeading>
+          <p style={{ marginBottom: "1.5rem" }}>
+            As part of the Physionet 2024 Challenge, I competed alongside 4 other members from Edwards Lifesciences to develop
+            a computer vision pipeline to convert paper ECGs into digital format. My specific task was to build a pipeline to
+            deskew scanned ECG images as a preprocessing step.
+          </p>
+          <p style={{ marginBottom: "1.5rem" }}>
+            I finetuned a <strong style={{ color: C.bodyText }}>computer vision transformer model</strong> on synthetically generated
+            scans of ECG images. The model was trained locally on a GPU, then dockerized and deployed to the Physionet challenge servers.
+            Due to resource constraints at inference time, the model was not used in the final submission pipeline; however, it achieved{" "}
+            <strong style={{ color: C.bodyText }}>90% accuracy</strong> and was explored as a potential improvement over the rule-based
+            deskewing method used in the published paper.
+          </p>
+
+          <ProseHeading>Publication</ProseHeading>
+          <p>
+            Our paper,{" "}
+            <em>&ldquo;Fusion of Deep Learning and Rule-Based Techniques for Enhanced Paper-Based ECG Digitization&rdquo;</em>,
+            was accepted to the <strong style={{ color: C.bodyText }}>Computing in Cardiology 2024 Conference</strong> and awarded{" "}
+            <strong style={{ color: C.bodyText }}>Best Preprint</strong>. It details the full development of our digitization
+            pipeline and was presented at the conference.
+          </p>
+        </div>
+
       </main>
-      <footer className="py-6 w-full shrink-0 items-center px-4 md:px-6 border-t border-sky-200 bg-sky-100">
-        <p className="text-xs text-sky-800 text-center">© 2024 Kelvin Nguyen. All rights reserved.</p>
+
+      <footer style={{ backgroundColor: C.sectionAlt, borderTop: `1px solid ${C.border}`, padding: "1.5rem", textAlign: "center" }}>
+        <p style={{ fontSize: "0.8125rem", color: C.mutedText }}>© {new Date().getFullYear()} Kelvin Nguyen</p>
       </footer>
     </div>
+  )
+}
+
+function ProseHeading({ children }: { children: React.ReactNode }) {
+  return (
+    <h2 style={{
+      fontFamily: "'Cormorant Garamond', serif",
+      fontSize: "1.5rem",
+      fontWeight: 600,
+      color: "#1F3B16",
+      marginTop: "2.25rem",
+      marginBottom: "0.875rem",
+      letterSpacing: "-0.01em",
+    }}>
+      {children}
+    </h2>
   )
 }

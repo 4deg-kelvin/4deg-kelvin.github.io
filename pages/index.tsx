@@ -276,7 +276,7 @@ export default function Home() {
                 className="site-fade-in site-fade-in-delay-2"
                 style={{ fontSize: "1.0625rem", lineHeight: 1.75, color: C.dimText, maxWidth: 480, marginBottom: "2rem" }}
               >
-                CS + Math at Stanford. I do research in the NLP and Multi-Robot Systems labs, build medical AI at Edwards Lifesciences, and lead autonomy on a campus food delivery drone. Also a Snoopy fan.
+                CS + Math at Stanford, incoming SDE intern @ Amazon Lens. I do research in the NLP and Multi-Robot Systems labs, build medical AI at Edwards Lifesciences, and lead autonomy on a campus food delivery drone. Also a Snoopy fan.
               </p>
               <div className="site-fade-in site-fade-in-delay-3" style={{ display: "flex", alignItems: "center", gap: "1rem", flexWrap: "wrap" }}>
                 <a
